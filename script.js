@@ -56,7 +56,9 @@ function generatePattern() {
 
     document.getElementById('outputDiv').hidden = false;
     document.getElementById('TotalSum').textContent = result.split('\n')[1];
-    document.getElementById('PyramidPattern').textContent = result.split('\n').slice(2).join('\n');
+    let PyramidPattern = document.getElementById('PyramidPattern')
+    PyramidPattern.textContent = result.split('\n').slice(2).join('\n');
+    PyramidPattern.hidden = false;
 }
 
 (() => {

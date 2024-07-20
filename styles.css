@@ -1,3 +1,11 @@
 .mtop {
     margin-top: 3rem !important;
 }
+
+.outputBackground {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 25rem !important;
+}
