@@ -54,6 +54,28 @@ function generatePattern() {
         currentDigits = nextDigits;
     }
 
+    document.getElementById('outputDiv').hidden = false;
     document.getElementById('TotalSum').textContent = result.split('\n')[1];
-    document.getElementById('PyramidPattern').textContent = result.split('\n').slice(2).join('\n');
+    let PyramidPattern = document.getElementById('PyramidPattern')
+    PyramidPattern.textContent = result.split('\n').slice(2).join('\n');
+    PyramidPattern.hidden = false;
 }
+
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        event.preventDefault()
+        if (!form.checkValidity()) {
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })();
